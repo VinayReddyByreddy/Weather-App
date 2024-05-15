@@ -1,0 +1,48 @@
+.location-table {
+    margin: 50px;
+}
+
+.location-table h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+.add-location-btn {
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-location-btn:hover {
+    background-color: #0056b3;
+}
+
+.location-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.location-table th,
+.location-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.location-table th {
+    background-color: #f2f2f2;
+}
+
+.location-table tbody tr {
+    border: 1px solid #ccc;
+}
+
+.location-table tbody tr:hover {
+    background-color: #f9f9f9;
+}

@@ -1,0 +1,21 @@
+<div class="add-location">
+  <a routerLink="/locations">
+    Back to Home Page
+  </a>
+  <h2>Add Location</h2> 
+  <form (ngSubmit)="onSubmit()" #locationForm="ngForm">
+      <div class="form-group">
+          <label for="coordinatex">Coordinate (X)</label>
+          <input placeholder="Please enter Coordinate (X)" type="text" id="coordinatex" name="coordinatex" class="form-control" [(ngModel)]="coordinatex" required>
+      </div>
+      <div class="form-group">
+          <label for="coordinatey">Coordinate (Y)</label>
+          <input placeholder="Please enter Coordinate (Y)" type="text" id="coordinatey" name="coordinatey" class="form-control" [(ngModel)]="coordinatey" required>
+      </div>
+      <div class="form-group">
+          <label for="locationName">Location Name</label>
+          <input placeholder="Please enter location name" type="text" id="locationName" name="locationName" class="form-control" [(ngModel)]="locationName" required>
+      </div>
+      <button type="submit" class="btn">Add Location</button>
+    </form>
+</div>

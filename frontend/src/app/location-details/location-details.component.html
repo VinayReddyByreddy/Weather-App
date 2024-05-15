@@ -1,0 +1,31 @@
+<div class="location-details">
+  <a routerLink="/locations" class="back-link">
+    Back to Home Page
+  </a>
+  <h2>Location Details</h2>
+  
+  <div *ngIf="selectedLocation && selectedLocationWeather" class="details-section">
+    <div class="weather-info">
+      <img [src]="selectedLocationWeather?.icon" alt="Weather Icon" class="weather-icon">
+      <div class="temperature">
+        <p class="current-temp">{{ selectedLocationWeather?.temperature }} {{ selectedLocationWeather?.temperatureUnit }}</p>
+        <p class="short-description">{{ selectedLocationWeather?.shortForecast }}</p>
+      </div>
+    </div>
+    
+    <div class="location-info">
+      <p><strong>Location:</strong> {{ selectedLocation.location_name }}</p>
+      <p><strong>Coordinates:</strong> {{ selectedLocation.x_axis }}, {{ selectedLocation.y_axis }}</p>
+      <p><strong>Wind:</strong> {{ selectedLocationWeather?.windSpeed }} {{ selectedLocationWeather?.windDirection }}</p>
+    </div>
+    
+    <div class="detailed-forecast">
+      <p><strong>Detailed Forecast:</strong></p>
+      <p>{{ selectedLocationWeather?.detailedForecast }}</p>
+    </div>
+  </div>
+  
+  <div *ngIf="!selectedLocationWeather" class="no-location">
+    <p>No location selected.</p>
+  </div>
+</div>
